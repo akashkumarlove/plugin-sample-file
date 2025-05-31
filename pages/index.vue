@@ -7,7 +7,7 @@
             <input v-model="inputText" name="text" placeholder="enter your text" type="text" class="text-red-500"/>
         </div>
 
-        <div class="button bg-black text-white rounded-lg py-3 px-8 mt-9 cursor-pointer">
+        <div class="button hover:bg-amber-950 hover:text-blue-700 bg-black text-white rounded-lg py-3 px-8 mt-9 cursor-pointer">
             <button @click="nextPage" class="cursor-pointer">Click to Navigate on 2nd Page</button>
         </div>
         

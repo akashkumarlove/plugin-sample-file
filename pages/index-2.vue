@@ -4,14 +4,20 @@
             Showing User Text
         </div>
 
-        <div class="content mt-5 text-red-500">
-            Simple Text =  
-               {{ userText }}
+        <div class="content text-2xl mt-5 text-red-500">
+            Simple Text 
+            <div class="text-black text-sm">
+                {{ userText }}
+            </div>
+               
         </div>
        
-        <div class="content mt-5 text-red-500">
-            UpperCase Text = 
-               {{ $toUppercase(userText) }}
+        <div class="content text-2xl mt-5 text-red-500">
+            UpperCase Text 
+            <div class="text-black text-sm">
+                 {{ $toUppercase(userText) }}
+            </div>
+               
         </div>
     </div>
 </template>
