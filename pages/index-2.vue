@@ -17,10 +17,21 @@
 </template>
 
 <script setup>
+
+     
+     import { onMounted , ref } from 'vue'
+     const userText = ref('')
        
-       const route = useRoute()
+    //    const route = useRoute()
        const {$toUppercase} = useNuxtApp()
 
 
-       const userText = route.query.text
+    //    const userText = route.query.text
+
+      
+ onMounted(() => {
+
+       userText.value = localStorage.getItem('userText')
+    })
+
 </script>

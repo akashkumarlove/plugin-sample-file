@@ -21,7 +21,12 @@ import { ref } from "vue";
     const router = useRouter()
     const inputText  = ref("")
 
-    function nextPage () {
-        router.push({path: "/index-2" , query: {text: inputText.value} })
-    }
+    // function nextPage () {
+    //     router.push({path: "/index-2" , query: {text: inputText.value} })
+    // }
+
+     function nextPage() {
+            localStorage.setItem('userText', inputText.value)
+            router.push('/index-2')
+}
 </script>
