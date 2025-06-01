@@ -6,7 +6,7 @@
 
         <div class="content text-2xl mt-5 text-red-500">
             Simple Text 
-            <div class="text-black text-sm">
+            <div class="text-black text-sm  ">
                 {{ userText }}
             </div>
                
@@ -23,21 +23,8 @@
 </template>
 
 <script setup>
-
      
-     import { onMounted , ref } from 'vue'
-     const userText = ref('')
-       
-    //    const route = useRoute()
-       const {$toUppercase} = useNuxtApp()
+     const { $toUppercase } = useNuxtApp()
 
-
-    //    const userText = route.query.text
-
-      
- onMounted(() => {
-
-       userText.value = localStorage.getItem('userText')
-    })
-
+     const userText = useState("userText")
 </script>

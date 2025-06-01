@@ -16,17 +16,12 @@
 
 <script setup>
 
-import { ref } from "vue";
+const router = useRouter()
 
-    const router = useRouter()
-    const inputText  = ref("")
+const inputText = useState("userText" , () => "")
 
-    // function nextPage () {
-    //     router.push({path: "/index-2" , query: {text: inputText.value} })
-    // }
-
-     function nextPage() {
-            localStorage.setItem('userText', inputText.value)
-            router.push('/index-2')
+const nextPage = () => {
+    router.push("/index-2")
 }
 </script>
+
