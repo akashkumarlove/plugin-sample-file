@@ -16,11 +16,15 @@
 
 <script setup>
 
-const router = useRouter()
+import { useUserStore } from "@/stores/user";
 
-const inputText = useState("userText" , () => "")
+const router = useRouter()
+const store = useUserStore()
+
+const inputText = ref("")
 
 const nextPage = () => {
+    store.setText(inputText.value)
     router.push("/index-2")
 }
 </script>

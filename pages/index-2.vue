@@ -7,7 +7,7 @@
         <div class="content text-2xl mt-5 text-red-500">
             Simple Text 
             <div class="text-black text-sm  ">
-                {{ userText }}
+                {{ store.text }}
             </div>
                
         </div>
@@ -15,7 +15,7 @@
         <div class="content text-2xl mt-5 text-red-500">
             UpperCase Text 
             <div class="text-black text-sm">
-                 {{ $toUppercase(userText) }}
+                 {{ $toUppercase(store.text) }}
             </div>
                
         </div>
@@ -23,8 +23,9 @@
 </template>
 
 <script setup>
+import { useUserStore } from "@/stores/user";
      
      const { $toUppercase } = useNuxtApp()
 
-     const userText = useState("userText")
+     const store = useUserStore()
 </script>
